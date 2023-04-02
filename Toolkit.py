@@ -19,8 +19,7 @@ print ("5. Hash Cracker")
 
 # print ("\nUtility\n")
 
-
-selection = input("Select a Program Number: ")
+selection = input("\nSelect a Program Number: ")
 print("")
 match selection:
     
