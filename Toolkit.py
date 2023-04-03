@@ -9,9 +9,10 @@ os.system ('cls')
 # Colour Settings
 from Config import colours
 
-banner = pyfiglet.figlet_format("Python Security Toolkit", font = "larry3d"  )
-print (banner)
-print ("Version V0.1\t\tProof of Concept\tCreative Commons Zero License".center(80))
+# Start Up Banner
+colours.Banner()
+colours.Copyright()
+
 sleep(2)
 
 os.system ('cls')

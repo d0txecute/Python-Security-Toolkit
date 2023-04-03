@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-
+import os,sys,argparse
 from scapy.all import *
-import argparse
+from Config.colours import colours
 
-print ("Network Scanner".center(80, "—"))
+colours.NetScanBanner()
 
 # Selections
 interface = input("Select Interface (eth0, wlan0, etc): ")
