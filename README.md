@@ -20,19 +20,17 @@ This is a multi-tool built with Python and Bash that can:
 - [Npcap (WINDOWS)](https://npcap.com)
 - [Libpcap (LINUX)](https://www.tcpdump.org/)
 
+### Installation
 ```powershell
 git clone https://github.com/d0txecute/Python-Security-Toolkit
 cd Python-Security-Toolkit
 pip install -r requirements.txt
 ```
-
 ### UPDATE
-
 ```
 cd Python-Security-Toolkit
 git pull
 ```
-
 ## Usage
 
 ```powershell
