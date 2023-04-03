@@ -26,7 +26,7 @@ packet = Ether(dst = broadcastMac) / ARP(pdst = ip_range)
 
 ans = srp (packet, timeout = 1, verbose=0)[0]
 
-print (Fore.GREEN + "IP Address\t\tMAC Address")
+print (Fore.GREEN + "IP Address\t  MAC Address")
 print ("".center(40, "-"))
 for send, receive in ans:
     print (receive.sprintf(r"%ARP.psrc%     %Ether.src%"))

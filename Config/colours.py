@@ -35,6 +35,12 @@ def Brute():
     print ("5. Hash Cracker")
     print(Style.RESET_ALL)
 
+def Settings():
+    print (Fore.YELLOW + "\nSettings\n")
+    print ("99. Configure Colours")
+    print(Style.RESET_ALL)
+
+
 def Exit():
     print (Fore.RED + "\n0. Exit")
     print(Style.RESET_ALL)
@@ -71,8 +77,6 @@ def HashCrackBanner():
     os.system('cls||clear')
     print (Fore.CYAN + "[ Hash Cracker ]".center(80, "—"))
     print(Style.RESET_ALL)
-
-# UTILITY COLOURS
 
 # Success - GREEN
 def Success():

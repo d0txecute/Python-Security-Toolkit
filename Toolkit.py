@@ -33,6 +33,8 @@ colours.Brute()
 colours.Seperator
 
 ## Utility ##
+colours.Settings()
+colours.Seperator()
 
 ## Exit ##
 colours.Seperator()
@@ -62,6 +64,9 @@ match selection:
         from Bruteforce import hashcracker
 
     # Utility
+
+    case "99":
+        os.system("Change Colour Settings from Config/colours.py")
 
     # Other
     case "0":
