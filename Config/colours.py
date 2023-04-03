@@ -36,13 +36,9 @@ def Brute():
     print(Style.RESET_ALL)
 
 def Settings():
-    print (Fore.YELLOW + "\nSettings\n")
+    print (Fore.YELLOW + "\nSETTINGS\n")
     print ("99. Configure Colours")
-    print(Style.RESET_ALL)
-
-
-def Exit():
-    print (Fore.RED + "\n0. Exit")
+    print (Fore.RED + "0. Exit")
     print(Style.RESET_ALL)
 
 def Seperator():

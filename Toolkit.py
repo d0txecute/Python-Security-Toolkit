@@ -3,6 +3,10 @@ import pyfiglet, os
 from colorama import *
 from time import sleep
 
+# Update on start up
+print ("Updating Repo")
+os.system ("git pull")
+sleep(1)
 # Clear Screen (UNIX/Windows)
 os.system ('cls||clear')
 
@@ -13,7 +17,7 @@ from Config import colours
 colours.Banner()
 colours.Copyright()
 
-sleep(2)
+sleep(1)
 
 os.system ('cls||clear')
 
@@ -30,16 +34,10 @@ colours.Seperator()
 
 ## Brute Force ##
 colours.Brute()
-colours.Seperator
+colours.Seperator()
 
 ## Utility ##
 colours.Settings()
-colours.Seperator()
-
-## Exit ##
-colours.Seperator()
-colours.Exit()
-colours.Seperator()
 
 selection = input("\nSelect a Program Number: ")
 print("")
@@ -65,10 +63,11 @@ match selection:
 
     # Utility
 
+    # Colour Settings
     case "99":
         os.system("Change Colour Settings from Config/colours.py")
 
-    # Other
+    # Exit
     case "0":
         print ("Until Next Time!\n")
         sleep (1)
