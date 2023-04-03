@@ -44,7 +44,7 @@ def Seperator():
     print (Fore.MAGENTA + "".center(80, "-"))
     print(Style.RESET_ALL)
 
-# NETWORK COLOURS
+# NETWORK COLOURS - GREEN
 def NetScanBanner():
     os.system('cls||clear')
     print (Fore.GREEN + "[ Network Scanner ]".center(80, "—"))
@@ -55,8 +55,17 @@ def PortScanBanner():
     print (Fore.GREEN + "[ Port Scanner ]".center(80, "—"))
     print(Style.RESET_ALL)
 
-# WEB COLOURS
+# WEB COLOURS - BLUE
+def SubBanner():
+    os.system('cls||clear')
+    print (Fore.BLUE + "[ Subdomain Enumerator ]".center(80, "—"))
+    print(Style.RESET_ALL)
 
-# BRUTE COLOURS
+def DirBanner():
+    os.system('cls||clear')
+    print (Fore.BLUE + "[ Directory Enumerator ]".center(80, "—"))
+    print(Style.RESET_ALL)
 
-# UTILITY COLOURS
+# BRUTE COLOURS - CYAN
+
+# UTILITY COLOURS - RED
