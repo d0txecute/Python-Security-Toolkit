@@ -11,7 +11,7 @@ def Menu():
     print (Fore.YELLOW + "[ MAIN MENU ]".center(80, "—"))
 
 def Banner():
-    banner = pf.figlet_format("Python Security Toolkit", font = "larry3d"  )
+    banner = pf.figlet_format("Python Security Toolkit", font = "larry3d", justify="center")
     print (Fore.WHITE + Style.BRIGHT + banner)
 
 def Copyright():
@@ -46,12 +46,14 @@ def Seperator():
 
 # NETWORK COLOURS
 def NetScanBanner():
-    os.sys('cls')
+    os.system('cls||clear')
     print (Fore.GREEN + "[ Network Scanner ]".center(80, "—"))
+    print(Style.RESET_ALL)
 
 def PortScanBanner():
-    os.sys('cls')
+    os.system('cls||clear')
     print (Fore.GREEN + "[ Port Scanner ]".center(80, "—"))
+    print(Style.RESET_ALL)
 
 # WEB COLOURS
 

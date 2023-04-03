@@ -3,8 +3,8 @@ import pyfiglet, os
 from colorama import *
 from time import sleep
 
-# Clear Screen
-os.system ('cls')
+# Clear Screen (UNIX/Windows)
+os.system ('cls||clear')
 
 # Colour Settings
 from Config import colours
@@ -15,7 +15,7 @@ colours.Copyright()
 
 sleep(2)
 
-os.system ('cls')
+os.system ('cls||clear')
 
 # Print Menu
 colours.Menu()
@@ -67,7 +67,7 @@ match selection:
     case "0":
         print ("Until Next Time!\n")
         sleep (1)
-        os.system ('cls')
+        os.system ('cls||clear')
         exit()
 
     # Error Handling
