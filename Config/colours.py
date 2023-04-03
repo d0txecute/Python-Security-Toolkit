@@ -67,5 +67,26 @@ def DirBanner():
     print(Style.RESET_ALL)
 
 # BRUTE COLOURS - CYAN
+def HashCrackBanner():
+    os.system('cls||clear')
+    print (Fore.CYAN + "[ Hash Cracker ]".center(80, "—"))
+    print(Style.RESET_ALL)
 
-# UTILITY COLOURS - RED
+# UTILITY COLOURS
+
+# Success - GREEN
+def Success():
+    Fore.GREEN + "[+] "
+
+# Fail - RED
+def Fail():
+    Fore.RED + "[-] "
+
+# Info - BLUE
+def Info():
+    Fore.BLUE + "[i] "
+
+# Alert - YELLOW
+def Alert():
+    Style.BRIGHT + Fore.YELLOW + "[!] "
+
