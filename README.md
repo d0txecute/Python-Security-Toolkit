@@ -1,4 +1,4 @@
-# Cyber Essentials Project
+# Python Security Toolkit
 
 Python Security Toolkit is a small project aimed to package multiple tools into one place. It is (semi)-easily customisable to your requirements.
 
