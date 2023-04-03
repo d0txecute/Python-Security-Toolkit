@@ -16,6 +16,7 @@ This is a multi-tool built with Python and Bash that can:
 ## Requirements & Installation 
 
 ### Requirements
+- [Python Pip](https://pip.pypa.io/en/stable/installation/)
 - [Wireshark](https://www.wireshark.org/download.html)
 - [Npcap (WINDOWS)](https://npcap.com)
 - [Libpcap (LINUX)](https://www.tcpdump.org/)
