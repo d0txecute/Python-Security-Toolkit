@@ -28,6 +28,26 @@ pip install -r requirements.txt
 
 ```powershell
 python Toolkit.py
+
+—————————————————————————————————[ MAIN MENU ]—————————————————————————————————
+NETWORK
+
+1. Network Scanner
+2. Port Scanner
+--------------------------------------------------------------------------------
+WEB APPLICATION
+
+3. Domain Enumerator
+4. Subdomain Enumerator
+--------------------------------------------------------------------------------
+BRUTE FORCE
+
+5. Hash Cracker
+--------------------------------------------------------------------------------
+0. Exit
+--------------------------------------------------------------------------------
+
+Select a Program Number:
 ```
 
 ## Tool List
