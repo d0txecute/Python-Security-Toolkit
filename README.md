@@ -15,13 +15,22 @@ This is a multi-tool built with Python and Bash that can:
 
 ## Requirements & Installation 
 
+### Requirements
 - [Wireshark](https://www.wireshark.org/download.html)
-- [Npcap](https://npcap.com)
+- [Npcap (WINDOWS)](https://npcap.com)
+- [Libpcap (LINUX)](https://www.tcpdump.org/)
 
 ```powershell
 git clone https://github.com/d0txecute/Python-Security-Toolkit
 cd Python-Security-Toolkit
 pip install -r requirements.txt
+```
+
+### UPDATE
+
+```
+cd Python-Security-Toolkit
+git pull
 ```
 
 ## Usage
