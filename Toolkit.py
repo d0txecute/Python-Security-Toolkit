@@ -1,23 +1,42 @@
 #!/usr/bin/python3 
-import pyfiglet
+import pyfiglet, os
+from colorama import *
+from time import sleep
+
+# Clear Screen
+os.system ('cls')
+
+# Colour Settings
+from Config import colours
 
 banner = pyfiglet.figlet_format("Python Security Toolkit", font = "larry3d"  )
 print (banner)
+print ("Version V0.1\t\tProof of Concept\tCreative Commons Zero License".center(80))
+sleep(2)
 
-print ("MAIN MENU".center(80, "—"))
+os.system ('cls')
 
-print ("\nNETWORK\n")
-print ("1. Network Scanner")
-print ("2. Port Scanner")
+# Print Menu
+colours.Menu()
 
-print ("\nWEB APPLICATION\n")
-print ("3. Domain Enumerator")
-print ("4. Subdomain Enumerator")
+## Networks ## 
+colours.Network()
+colours.Seperator()
 
-print ("\nBrute Force\n")
-print ("5. Hash Cracker")
+## Web Applications ##
+colours.Webapp()
+colours.Seperator()
 
-# print ("\nUtility\n")
+## Brute Force ##
+colours.Brute()
+colours.Seperator
+
+## Utility ##
+
+## Exit ##
+colours.Seperator()
+colours.Exit()
+colours.Seperator()
 
 selection = input("\nSelect a Program Number: ")
 print("")
@@ -42,9 +61,14 @@ match selection:
         from Bruteforce import hashcracker
 
     # Utility
+
+    # Other
+    case "0":
+        print ("Until Next Time!\n")
+        sleep (1)
+        os.system ('cls')
+        exit()
+
+    # Error Handling
     case TypeError:
-        print ("""
-        Linux:      python3 Toolkit.py
-        Mac:        python3 Toolkit.py
-        Windows:    .\python.exe Toolkit.py
-        """)
+        print ("[!] Error: Bad Option")
