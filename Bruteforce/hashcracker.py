@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-import hashlib
+import hashlib, os, sys
+from colorama import Fore
 
 # Goes back a directory then imports from the Config directory
 sys.path.append('..')
@@ -7,7 +8,7 @@ from Config import colours
 
 colours.HashCrackBanner()
 
-wordlist_location = os.path.join(os.path.dirname(_file_), '..', 'Wordlists', 'passwords.txt')
+wordlist_location = os.path.abspath('../Wordlists/passwords.txt')
 hash_input = str(input('[+] Enter hash to be cracked: '))
 
 # hashtype = input("[+] Enter Hash Type:").lower()
