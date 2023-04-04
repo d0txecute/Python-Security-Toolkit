@@ -23,16 +23,14 @@ def domain_scan (domain_name, sub_names):
         except requests.ConnectionError:
             pass
 
-if __name__ == '__main__':
+# Wordlist Path
+wordlist = os.path.abspath('Wordlists/subdomain.txt')
 
-    # Wordlist Path
-    wordlist = os.path.abspath('../Wordlists/subdomain.txt')
+dom_name = input (Fore.BLUE + "[i] Enter Domain: ")
+print ('\n')
 
-    dom_name = input (Fore.BLUE + "[i] Enter Domain: ")
-    print ('\n')
+with open (wordlist, 'r') as file:
+    name = file.read()
+    sub_dom = name.splitlines()
 
-    with open (wordlist, 'r') as file:
-        name = file.read()
-        sub_dom = name.splitlines()
-
-    domain_scan(dom_name, sub_dom)
+domain_scan(dom_name, sub_dom)
