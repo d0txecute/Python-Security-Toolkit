@@ -15,8 +15,8 @@ def hash_cracker(hash_input, hashtype):
     with open(wordlist_location, 'r') as file:
         for line in file.readlines():
 
-            hash_ob = hashtype(line.strip().encode())
-            hashed_pass = hash_ob.hexdigest()
+            hash_obj = hashtype(line.strip().encode())
+            hashed_pass = hash_obj.hexdigest()
             if hashed_pass == hash_input:
                 print(Fore.GREEN + '\n[+] Password Found: ' + line.strip())
                 break
@@ -47,7 +47,7 @@ def set_hashing_algorithm():
 while(True):
     set_hashing_algorithm()
     
-    decision = input(str(Fore.RESET + '\n[i] Do you want to enter another hash? (y/n): ')).lower()
+    decision = input(str(Fore.BLUE + '\n[i] Do you want to enter another hash? (y/n): ')).lower()
     print('=' * 80)
     if decision == 'y':
         continue
