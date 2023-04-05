@@ -7,7 +7,7 @@ from time import sleep
 print ("Updating Repo")
 os.system ("git pull")
 sleep(1)
-# Clear Screen (UNIX/Windows)
+# Clear Screen (Windows/*NIX)
 os.system ('cls||clear')
 
 # Colour Settings
