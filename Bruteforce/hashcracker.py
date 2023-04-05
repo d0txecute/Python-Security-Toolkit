@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import hashlib, os, sys
-from colorama import Fore
+from colorama import *
 
 # Goes back a directory then imports from the Config directory
 sys.path.append('..')
