@@ -2,6 +2,7 @@
 import os,sys,argparse
 from colorama import *
 from scapy.all import *
+from prettytable import PrettyTable
 
 # Goes back a directory then imports from the Config directory
 sys.path.append('..')
@@ -13,6 +14,7 @@ colours.NetScanBanner()
 os.system("ipconfig||ifconfig||ip a")
 
 colours.Seperator()
+myTable = PrettyTable()
 
 # User Prompt
 ip_range = input("Enter IP Range (10.10.X.X/24): ")
@@ -25,8 +27,15 @@ broadcastMac = "ff:ff:ff:ff:ff:ff"
 packet = Ether(dst = broadcastMac) / ARP(pdst = ip_range)
 
 ans = srp (packet, timeout = 1, verbose=0)[0]
+    
+myTable.field_names = ['IP Addresses',
+                      'MAC Addresses']
+myTable.padding_width = 3
 
-print (Fore.GREEN + "IP Address\t  MAC Address")
-print ("".center(40, "-"))
 for send, receive in ans:
-    print (receive.sprintf(r"%ARP.psrc%     %Ether.src%"))
+    myTable.add_row([receive.sprintf(r"%ARP.psrc%"), 
+                     receive.sprintf("%Ether.src%")])
+
+print (Fore.GREEN)
+print (myTable) 
+print(Style.RESET_ALL)
