@@ -39,41 +39,48 @@ colours.Seperator()
 ## Utility ##
 colours.Settings()
 
-selection = input("\nSelect a Program Number: ")
-print("")
-match selection:
+try:
+
+    selection = input("\nSelect a Program Number: ")
+    print("")
+    match selection:
     
-    # Networks
-    case "1":
-        from Networks import netscan
+     # Networks
+        case "1":
+            from Networks import netscan
 
-    case "2":
-        from Networks import portscan
+        case "2":
+            from Networks import portscan
 
-    # Web Application
-    case "3":
-        from Webapp import directory_enum
+        # Web Application
+        case "3":
+            from Webapp import directory_enum
 
-    case "4":
-        from Webapp import subdomain_enum
+        case "4":
+            from Webapp import subdomain_enum
 
-    # Brute Force
-    case "5":
-        from Bruteforce import hashcracker
+        # Brute Force
+        case "5":
+            from Bruteforce import hashcracker
 
-    # Utility
+        # Utility
+    
+        # Colour Settings
+        case "99":
+            os.system("Change Colour Settings from Config/colours.py")
 
-    # Colour Settings
-    case "99":
-        os.system("Change Colour Settings from Config/colours.py")
+        # Exit
+        case "0":
+            print ("Until Next Time!\n")
+            sleep (1)
+            os.system ('cls||clear')
+            exit()
 
-    # Exit
-    case "0":
-        print ("Until Next Time!\n")
-        sleep (1)
-        os.system ('cls||clear')
-        exit()
+        # Error Handling
+        case TypeError:
+            print ("[!] Error: Bad Option")
 
-    # Error Handling
-    case TypeError:
-        print ("[!] Error: Bad Option")
+except KeyboardInterrupt:
+    quit_message = input(
+    Fore.LIGHTRED_EX + "\n[!] Exiting - Keyboard Interrupt" + Style.RESET_ALL).lower()
+    break
