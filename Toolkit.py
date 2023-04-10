@@ -83,4 +83,4 @@ try:
 except KeyboardInterrupt:
     quit_message = input(
     Fore.LIGHTRED_EX + "\n[!] Exiting - Keyboard Interrupt" + Style.RESET_ALL).lower()
-    break
+    exit(0)

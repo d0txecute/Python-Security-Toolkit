@@ -42,7 +42,7 @@ def set_hashing_algorithm():
         case '6':
             hash_cracker(hash_input, hashlib.md5)
         case _:
-            print(Fore.RED + "\n[-] Incorrect input.\nPlease enter a number.")
+            print(Fore.RED + "\n[-] Incorrect input.\nPlease enter a number (1 - 6).")
 
 while(True):
     set_hashing_algorithm()
