@@ -1,51 +1,46 @@
-#!/usr/bin/python3 
-import pyfiglet, os
-from colorama import *
+#!/usr/bin/python3
+
 from time import sleep
+from Config.colours import *
+from Config.commands import *
 
 # Update on start up
-print ("Updating Repo")
-os.system ("git pull")
+print("Updating Repo")
+
 sleep(1)
 # Clear Screen (Windows/*NIX)
-os.system ('cls||clear')
-
-# Colour Settings
-from Config import colours
+clear()
 
 # Start Up Banner
-colours.Banner()
-colours.Copyright()
-
+Banner()
+Copyright()
 sleep(1)
-
-os.system ('cls||clear')
+clear()
 
 # Print Menu
-colours.Menu()
+Menu()
 
 ## Networks ## 
-colours.Network()
-colours.Seperator()
+Network()
+Seperator()
 
 ## Web Applications ##
-colours.Webapp()
-colours.Seperator()
+Webapp()
+Seperator()
 
 ## Brute Force ##
-colours.Brute()
-colours.Seperator()
+Brute()
+Seperator()
 
 ## Utility ##
-colours.Settings()
-
+Settings()
 try:
 
     selection = input("\nSelect a Program Number: ")
     print("")
+
     match selection:
-    
-     # Networks
+        # Networks
         case "1":
             from Networks import netscan
 
@@ -64,23 +59,26 @@ try:
             from Bruteforce import hashcracker
 
         # Utility
-    
+
         # Colour Settings
         case "99":
-            os.system("Change Colour Settings from Config/colours.py")
+            Info("Change Colour Settings from Config/colours.py")
 
         # Exit
         case "0":
-            print ("Until Next Time!\n")
-            sleep (1)
-            os.system ('cls||clear')
+            Info("Until Next Time!\n")
+            sleep(1)
+            clear()
             exit()
 
         # Error Handling
         case TypeError:
-            print ("[!] Error: Bad Option")
+            Fail("Error: Bad Option")
 
 except KeyboardInterrupt:
     quit_message = input(
-    Fore.LIGHTRED_EX + "\n[!] Exiting - Keyboard Interrupt" + Style.RESET_ALL).lower()
-    exit(0)
+        Fore.LIGHTRED_EX + "\n[!] Are you sure you want to quit? (yes/no): " + Style.RESET_ALL).lower()
+    if quit_message == 'y' or quit_message == 'yes':
+        exit()
+    else:
+        pass

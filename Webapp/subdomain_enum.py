@@ -1,35 +1,33 @@
 #!/usr/bin/python3
-import requests, sys, os
+import requests
+from Config.colours import *
+from Config.commands import *
 
-# Goes back a directory then imports from the Config directory
-sys.path.append('..')
-from colorama import *
-from Config import colours
+SubBanner()
 
-colours.SubBanner()
 
-def domain_scan (domain_name, sub_names):
-    print ('Subdomains'.center(80, '-'))
+def domain_scan(domain_name, sub_names):
+    print('Subdomains'.center(80, '-'))
 
     for subdomain in sub_names:
         url = f"http://{subdomain}.{domain_name}"
 
-        try: # Displays successful results
+        try:  # Displays successful results
             requests.get(url)
-            print (Fore.GREEN + f"[+] {url}")
-            print (Style.RESET_ALL)
+            Success(url)
 
-        # If Conection Error, skip to next subdomain
+        # If Connection Error, skip to next subdomain
         except requests.ConnectionError:
             pass
+
 
 # Wordlist Path
 wordlist = os.path.abspath('Wordlists/subdomain.txt')
 
-dom_name = input (Fore.BLUE + "[i] Enter Domain: ")
-print ('\n')
+dom_name = input(Fore.BLUE + "[i] Enter Domain: ")
+print('\n')
 
-with open (wordlist, 'r') as file:
+with open(wordlist, 'r') as file:
     name = file.read()
     sub_dom = name.splitlines()
 
