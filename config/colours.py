@@ -86,21 +86,21 @@ def HashCrackBanner():
 
 # Success - GREEN
 def success(function):
-    f"{Fore.GREEN}[+] {function}{Style.RESET_ALL}"
+    print(f"{Fore.GREEN}[+] {function} {Style.RESET_ALL}")
 
 # Fail - RED
-def fail():
-    f"{Fore.RED}[-] {function}{Style.RESET_ALL}"
+def fail(function):
+    print(f"{Fore.RED}[-] {function} {Style.RESET_ALL}")
 
 # Info - BLUE
-def info():
-    f"{Fore.BLUE}[i] {function}{Style.RESET_ALL}"
+def info(function):
+    f"{Fore.BLUE}[i] {function} {Style.RESET_ALL}"
 
 # Process - YELLOW
-def process():
-    f"{Fore.YELLOW}[*] {function}{Style.RESET_ALL}"
+def process(function):
+    f"{Fore.YELLOW}[*] {function} {Style.RESET_ALL}"
 
 # Alert - MAGENTA
-def alert():
+def alert(function):
     Style.BRIGHT + Fore.MAGENTA + "[!] " + function + Style.RESET_ALL
 
