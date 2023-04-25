@@ -1,25 +1,24 @@
 #!/usr/bin/python3
-import os,sys,argparse
-from colorama import *
+import os,sys
 from scapy.all import *
 from prettytable import PrettyTable
 
 # Goes back a directory then imports from the Config directory
 sys.path.append('..')
-from Config import colours
+from config.colours import *
 
-colours.NetScanBanner()
+NetScanBanner()
 
 # Display interfaces (3 commands for each OS)
 os.system("ipconfig||ifconfig||ip a")
 
-colours.Seperator()
+Seperator()
 myTable = PrettyTable()
 
 # User Prompt
-ip_range = input("Enter IP Range (10.10.X.X/24): ")
+ip_range = input(f"{Fore.YELLOW}[*] Enter IP Range (10.10.X.X/24): {Style.RESET_ALL}")
 
-colours.Seperator()
+Seperator()
 
 # MAC will be replaced with Ether.src
 broadcastMac = "ff:ff:ff:ff:ff:ff"

@@ -1,6 +1,6 @@
 #!/usr/bin/python3 
-import pyfiglet, os
-from colorama import *
+import os
+from config.colours import *
 from time import sleep
 
 # Update on start up
@@ -10,34 +10,32 @@ sleep(1)
 # Clear Screen (Windows/*NIX)
 os.system ('cls||clear')
 
-# Colour Settings
-from Config import colours
 
 # Start Up Banner
-colours.Banner()
-colours.Copyright()
+Banner()
+Copyright()
 
 sleep(1)
 
 os.system ('cls||clear')
 
 # Print Menu
-colours.Menu()
+Menu()
 
 ## Networks ## 
-colours.Network()
-colours.Seperator()
+Network()
+Seperator()
 
 ## Web Applications ##
-colours.Webapp()
-colours.Seperator()
+Webapp()
+Seperator()
 
 ## Brute Force ##
-colours.Brute()
-colours.Seperator()
+Brute()
+Seperator()
 
 ## Utility ##
-colours.Settings()
+Settings()
 
 try:
 
@@ -47,27 +45,27 @@ try:
     
      # Networks
         case "1":
-            from Networks import netscan
+            from networks import netscan
 
         case "2":
-            from Networks import portscan
+            from networks import portscan
 
         # Web Application
         case "3":
-            from Webapp import directory_enum
+            from webapp import directory_enum
 
         case "4":
-            from Webapp import subdomain_enum
+            from webapp import subdomain_enum
 
         # Brute Force
         case "5":
-            from Bruteforce import hashcracker
+            from bruteforce import hashcracker
 
         # Utility
     
         # Colour Settings
         case "99":
-            os.system("Change Colour Settings from Config/colours.py")
+            print("Change Colour Settings from config/colours.py")
 
         # Exit
         case "0":
@@ -83,4 +81,7 @@ try:
 except KeyboardInterrupt:
     quit_message = input(
     Fore.LIGHTRED_EX + "\n[!] Exiting - Keyboard Interrupt" + Style.RESET_ALL).lower()
-    break
+    exit()
+
+except Exception:
+    pass

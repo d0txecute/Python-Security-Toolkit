@@ -33,13 +33,12 @@ def Webapp():
 def Brute():
     print (Fore.CYAN + "\nBRUTE FORCE\n")
     print ("5. Hash Cracker")
-    print(Style.RESET_ALL)
+    print()
 
 def Settings():
     print (Fore.YELLOW + "\nSETTINGS\n")
     print ("99. Configure Colours")
-    print (Fore.RED + "0. Exit")
-    print(Style.RESET_ALL)
+    print(f"{Fore.RED}0. Exit{Style.RESET_ALL}")
 
 def Seperator():
     print ("")
@@ -75,18 +74,18 @@ def HashCrackBanner():
     print(Style.RESET_ALL)
 
 # Success - GREEN
-def Success():
-    Fore.GREEN + "[+] "
+def success(function):
+    f"{Fore.GREEN}[+] {function}{Style.RESET_ALL}"
 
 # Fail - RED
-def Fail():
-    Fore.RED + "[-] "
+def fail():
+    f"{Fore.RED}[-] {function}{Style.RESET_ALL}"
 
 # Info - BLUE
-def Info():
-    Fore.BLUE + "[i] "
+def info():
+    f"{Fore.BLUE}[i] {function}{Style.RESET_ALL}"
 
 # Alert - YELLOW
-def Alert():
-    Style.BRIGHT + Fore.YELLOW + "[!] "
+def alert():
+    Style.BRIGHT + Fore.YELLOW + "[!] " + function + Style.RESET_ALL
 
