@@ -38,13 +38,13 @@ def set_hashing_algorithm():
         case '6':
             hash_cracker(hash_input, hashlib.md5)
         case _:
-            print(Fore.RED + "\n[-] Incorrect input.\nPlease enter a number (1 - 6).")
+            print(Fore.RED + "\n[-] Incorrect input.\nPlease enter a number (1 - 6)."+Style.RESET_ALL)
 
 
 while True:
     set_hashing_algorithm()
 
-    decision = input(str(Fore.BLUE + '\n[i] Do you want to enter another hash? (y/n): ')).lower()
+    decision = input(str(Fore.BLUE + '\n[i] Do you want to enter another hash? (y/n): '+Style.RESET_ALL)).lower()
     print('=' * 80)
     if decision == 'y':
         continue

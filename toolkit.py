@@ -1,8 +1,7 @@
 #!/usr/bin/python3 
 from time import sleep
 from config.colours import *
-from config.commands import *
-
+from config.commands import update
 # Update on start up
 update()
 

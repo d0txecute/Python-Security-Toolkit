@@ -1,5 +1,5 @@
-from colorama import *
-from config.commands import *
+from colorama import Fore, Style
+from config.commands import clear
 import pyfiglet as pf
 # This is a config file for the colours. You can add your functions here or do it on the main program if you wish.
 
