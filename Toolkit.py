@@ -1,23 +1,20 @@
 #!/usr/bin/python3 
-import os
-from config.colours import *
 from time import sleep
+from config.colours import *
+from config.commands import *
 
 # Update on start up
-print ("Updating Repo")
-os.system ("git pull")
+update()
+
 sleep(1)
 # Clear Screen (Windows/*NIX)
-os.system ('cls||clear')
-
+clear()
 
 # Start Up Banner
 Banner()
 Copyright()
-
 sleep(1)
-
-os.system ('cls||clear')
+clear()
 
 # Print Menu
 Menu()
@@ -36,14 +33,13 @@ Seperator()
 
 ## Utility ##
 Settings()
-
 try:
 
     selection = input("\nSelect a Program Number: ")
     print("")
+
     match selection:
-    
-     # Networks
+        # Networks
         case "1":
             from networks import netscan
 
@@ -62,21 +58,21 @@ try:
             from bruteforce import hashcracker
 
         # Utility
-    
+
         # Colour Settings
         case "99":
             print("Change Colour Settings from config/colours.py")
 
         # Exit
         case "0":
-            print ("Until Next Time!\n")
-            sleep (1)
-            os.system ('cls||clear')
+            info("Until Next Time!\n")
+            sleep(1)
+            clear()
             exit()
 
         # Error Handling
         case TypeError:
-            print ("[!] Error: Bad Option")
+            fail("Error: Bad Option")
 
 except KeyboardInterrupt:
     quit_message = input(

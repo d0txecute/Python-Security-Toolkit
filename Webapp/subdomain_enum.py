@@ -4,8 +4,8 @@ from config.colours import *
 
 SubBanner()
 
-def domain_scan (domain_name, sub_names):
-    print ('Subdomains'.center(80, '-'))
+def domain_scan(domain_name, sub_names):
+    print('Subdomains'.center(80, '-'))
 
     for subdomain in sub_names:
         url = f"http://{subdomain}.{domain_name}"
@@ -15,9 +15,10 @@ def domain_scan (domain_name, sub_names):
             requests.get(url)
             success(url)
 
-        # If Conection Error, skip to next subdomain
+        # If Connection Error, skip to next subdomain
         except requests.ConnectionError:
             pass
+
 
 # Wordlist Path
 wordlist = os.path.abspath('Wordlists/subdomain.txt')
