@@ -79,5 +79,6 @@ except KeyboardInterrupt:
     Fore.LIGHTRED_EX + "\n[!] Exiting - Keyboard Interrupt" + Style.RESET_ALL).lower()
     exit()
 
-except Exception:
-    pass
+except Exception as e:
+    fail(e)
+    exit()
