@@ -7,7 +7,7 @@ def clear():
 
 
 def update():
-    process("Checking for Updates")
+    print(f"{Fore.YELLOW}[*] Checking for Updates{Style.RESET_ALL}")
     os.system("git pull")
 
 

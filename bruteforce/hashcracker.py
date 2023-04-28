@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 import hashlib
+
 from config.colours import *
 from config.commands import *
+
 clear()
 HashCrackBanner()
 
@@ -12,7 +14,7 @@ def hash_cracker(hash_input, hashtype):
             hash_obj = hashtype(line.strip().encode())
             hashed_pass = hash_obj.hexdigest()
             if hashed_pass == hash_input:
-                success("Password Found: ")
+                success("Password Found: " + line)
                 break
         else:
             fail('Password Not Found')
@@ -21,8 +23,7 @@ def hash_cracker(hash_input, hashtype):
 # Choose hashing algorithm and type in the hash to be cracked
 def set_hashing_algorithm():
     hash_input = input(str(f'{Fore.BLUE}[i] Enter hash to be cracked: '))
-    hashtype = input(
-        str(Fore.BLUE + "\n[1] SHA1\n[2] SHA224\n[3] SHA256\n[4] SHA384\n[5] SHA512\n[6] MD5\n[+] Enter Hash Type(number): "))
+    hashtype = input(str(f'{Fore.BLUE}\n[1] SHA1\n[2] SHA224\n[3] SHA256\n[4] SHA384\n[5] SHA512\n[6] MD5\n[+] Enter Hash Type(number): '))
     print(Style.RESET_ALL)
     match hashtype:
         case '1':
@@ -38,13 +39,13 @@ def set_hashing_algorithm():
         case '6':
             hash_cracker(hash_input, hashlib.md5)
         case _:
-            print(Fore.RED + "\n[-] Incorrect input.\nPlease enter a number (1 - 6).")
+            fail("\nIncorrect input.\nPlease enter a number (1 - 6).")
 
 
 while True:
     set_hashing_algorithm()
 
-    decision = input(str(Fore.BLUE + '\n[i] Do you want to enter another hash? (y/n): ')).lower()
+    decision = input(str(Fore.BLUE + '\n[i] Do you want to enter another hash? (y/n): '+Style.RESET_ALL)).lower()
     print('=' * 80)
     if decision == 'y':
         continue
