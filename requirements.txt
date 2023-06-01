@@ -1,6 +1,5 @@
 colorama==0.4.6
-Config==0.5.1
 prettytable==3.7.0
 pyfiglet==0.8.post1
-Requests==2.28.2
+Requests==2.29.0
 scapy==2.5.0
